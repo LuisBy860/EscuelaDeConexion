@@ -1,0 +1,44 @@
+﻿@model List<EsculaDeConexion.Models.Courses>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row" id ="tabladecursos">
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <th>
+                    Course Id
+                </th>
+                <th>
+                    Title Id
+                </th>
+                <th>
+                    Credits Id
+                </th>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model) { 
+                <tr>
+
+                    <td>@item.CouserId</td>
+                    <td>@item.Credits</td>
+                    <td>@item.Title</td>
+                </tr>
+                }
+            
+            </tbody>
+
+        </table>
+    </div>
+</div>
+@section script{
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var tablaCurso = $('#tabladecursos').DataTable();
+        });
+    </script>
+    }
