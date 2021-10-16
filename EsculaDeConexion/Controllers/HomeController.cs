@@ -13,7 +13,7 @@ namespace EsculaDeConexion.Controllers
         public ActionResult Index()
         {
         
-            CoursesRepository coursesRepository = new CoursesRepository();
+            CoursesRepository  coursesRepository = new CoursesRepository();
       
            var ListOfData =  coursesRepository.ListDataCourses();
            
